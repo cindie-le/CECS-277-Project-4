@@ -23,32 +23,25 @@ public class Part1 {
 
                 //Get name
                 System.out.print("First & Last Name: ");
-                name = in.nextLine();
+                name = getString(name);
+
 
                 //Get service
                 System.out.print("Service: ");
-                service = in.nextLine();
+                service = getString(service);
 
                 //Get/validate sale
                 System.out.print("Amount of Sale: $");
+                sale = getDouble(sale);
 
-                while( true ) {
-                    if( in.hasNextDouble() ) {
-                        sale = in.nextDouble();
-                        break;
-                    } else {
-                        in.next();
-                        System.out.println( "Invalid. Please enter a number." );
-                    }
-                }
 
                 //Consume the next newline character that is leftover from reading in the double value for sale.
-                String consume = in.nextLine();
+                //String consume = in.nextLine();
 
                 //Get date
                 System.out.print("Date (MM/DD/YYYY): ");
-                date = in.nextLine();
-                System.out.println("The date is " + date);
+                date = getString(date);
+
 
                 //Write the information to the file
                 writer.println(name + ";" + service + ";" +  String.format("%.2f", sale) + ";" + date);
@@ -66,6 +59,40 @@ public class Part1 {
         } catch (FileNotFoundException fnf) {
             System.out.println("File was not found.");
         }
+    }
+
+    /**
+     * Gets and validates user input in the form of a string
+     * @param s string
+     * @return s string
+     */
+    public static String getString (String s) {
+        Scanner in = new Scanner(System.in);
+        s = in.nextLine();
+        while (s.length() <= 0)  {
+            System.out.println("Invalid. Enter " + s + " correctly: ");
+            s = in.nextLine();
+        }
+        return s;
+    }
+
+    /**
+     * Gets and validates user input in the form of a double
+     * @param d double
+     * @return d double
+     */
+    public static double getDouble ( Double d ) {
+        Scanner in = new Scanner(System.in);
+        while( true ) {
+            if( in.hasNextDouble() ) {
+                d = in.nextDouble();
+                break;
+            } else {
+                in.next();
+                System.out.println( "Invalid. Please enter a number." );
+            }
+        }
+        return d;
     }
 }
 
