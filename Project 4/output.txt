@@ -1,0 +1,52 @@
+1. Enter new sale
+2. Organize sales
+3. Quit
+What would you like do? : 1
+Please enter sales information about the client. 
+First & Last Name: 
+Invalid. Enter a string: Peter Vu
+Service: Sleeping
+Amount of Sale: $ten
+Invalid. Please enter a number: 10.00
+Date (MM/DD/YYYY): 02132003
+Please enter in the form MM/DD/YYYY: 02/13/2003
+Would you like to enter information about another client? (Y/N): n
+n
+1. Enter new sale
+2. Organize sales
+3. Quit
+What would you like do? : 2
+Unknown service has been found
+1. Enter new sale
+2. Organize sales
+3. Quit
+What would you like do? : 1
+Please enter sales information about the client. 
+First & Last Name: Alexander Pham
+Service: Lodging
+Amount of Sale: $32.33
+Date (MM/DD/YYYY): 02/12/2009
+Would you like to enter information about another client? (Y/N): y
+y
+First & Last Name: Cindie Le
+Service: Conference
+Amount of Sale: $32.11
+Date (MM/DD/YYYY): 03/22/1999
+Would you like to enter information about another client? (Y/N): y
+y
+First & Last Name: Dirty Dan
+Service: Dinner
+Amount of Sale: $42.26
+Date (MM/DD/YYYY): 12/23/2012
+Would you like to enter information about another client? (Y/N): n
+n
+1. Enter new sale
+2. Organize sales
+3. Quit
+What would you like do? : 2
+Sales have been separated into files
+1. Enter new sale
+2. Organize sales
+3. Quit
+What would you like do? : 3
+Goodbye
